@@ -7,4 +7,5 @@ Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
 * El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
 * El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
 * El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-###### **Informacion sacada de:** https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model#%C2%BFqu%C3%A9_es_el_modelo_de_cajas_css
+###### **Informacion sacada de:**
+ https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model#%C2%BFqu%C3%A9_es_el_modelo_de_cajas_css
