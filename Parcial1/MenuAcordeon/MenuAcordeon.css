@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+}
+ul {
+    list-style: none;
+    width: 400px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ul > li > ul {
+    display: none;
+}
+
+ul > li:hover > ul {
+    display: block;
+    height: 100%;
+}
+
+.opcion {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgb(7, 73, 148);
+    color: white;
+}
+
+.subOpcion {
+    padding: 15px;
+    background: rgb(32, 167, 190);
+    color: white;
+}
