@@ -51,8 +51,9 @@
 .content .box:hover{
     background-color: blue;
     color: white;
+    width: 700px;
+    transform: rotate(60deg);
 }
-    /*width: 700px;
-    transform: rotate(-180deg);*/
+    
 
 
