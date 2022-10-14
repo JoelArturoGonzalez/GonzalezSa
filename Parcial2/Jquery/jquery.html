@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="Jquery.css">
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div id="box1" class="box">1</div>
+        <div id="box2" class="box">2</div>
+        <div id="box3" class="box">3</div>
+        <div id="box4" class="box">4</div>
+        <div id="box5" class="box">5</div>
+
+        <script>
+            $(document).ready( function() {
+                $('.box1').click(function() {
+                    alert('Se escucho el click en la libreria jquery en el boton 1')
+                });
+            });
+
+            $(document).ready( function() {
+                $('#box2').click(function() {
+                    alert('Se escucho el click en la libreria jquery en el boton 2')
+                });
+            });
+
+            $(document).ready( function() {
+                $('#box3').click(function() {
+                    alert('Se escucho el click en la libreria jquery en el boton 3')
+                });
+            });
+
+            $(document).ready( function() {
+                $('#box4').click(function() {
+                    alert('Se escucho el click en la libreria jquery en el boton 4')
+                });
+            });
+
+            $(document).ready( function() {
+                $('#box5').click(function() {
+                    alert('Se escucho el click en la libreria jquery en el boton 5')
+                });
+            }); 
+        </script>
+    </div>
+</body>
+</html>
