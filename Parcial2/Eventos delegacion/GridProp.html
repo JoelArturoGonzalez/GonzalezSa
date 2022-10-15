@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GridProp.css">
+    <title>Eventos delegacion (GridProp)</title>
+</head>
+<body>
+    <div  class="content" >  
+
+        <div id="Botones">
+            <ul>
+                <li>Caja 1</li>
+                <li>Caja 2</li>
+                <li>Caja 3</li>
+                <li>Caja 4</li>
+                <li>Caja 5</li>
+            </ul>            
+        </div>
+
+        <script>
+            const items = document.querySelectorAll('li')
+
+            items.forEach((item)=>{
+                item.addEventListener('click',()=>{
+                    item.classList.toggle('Evento')
+                })
+            })
+        </script>
+
+    </div>
+</body>
+</html>
