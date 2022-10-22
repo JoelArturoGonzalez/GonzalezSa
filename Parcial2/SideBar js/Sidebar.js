@@ -1,8 +1,5 @@
-window.onload=function(){
+const btnToggle = document.querySelector('.toggle-btn');
 
-    document.getElementById("btnMenu").addEventListener("click",function(){
-        document.getElementById("btn-menu").classList.toggle("escondido");
-    })
-
-    
-}
+btnToggle.addEventListener('click', function () {
+  document.getElementById('sidebar').classList.toggle('escondido');
+});
