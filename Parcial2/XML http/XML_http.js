@@ -4,7 +4,6 @@ window.onload = function() {
 
 }
     function pedirHeader() {
-    console.log("Mensaje de entrada")
     var solicitud = new XMLHttpRequest();
     solicitud.onreadystatechange = function() {
         if (solicitud.readyState == 4) {
@@ -14,13 +13,12 @@ window.onload = function() {
     
     solicitud.open("GET","CargarArchivo.txt",true);
     solicitud.send();
-    console.log("Mensaje de entrada 2")
+    
 }
 
 function iniciarHeader() {
     document.getElementById("MyDiv").innerText = "Regreso";
 }
-
 
 
 
