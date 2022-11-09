@@ -31,7 +31,6 @@
     
     <script type="module">
         import{mayuscula,longitud} from "./Modulo.js"
-
         document.getElementById("btn").addEventListener("click",function(){
             let varcad = document.getElementById("cad").value;
             let varcadM = mayuscula(varcad);
@@ -40,17 +39,16 @@
     </script>
 
     <script type="module">
-        import {mayuscula,longitud} from "./Modulo.js"
-        document.getElementById("btn2").addEventListener("click",function() {
+        import * as funciones from "./Modulo.js";
+        document.getElementById("btn2").addEventListener("click",function(){
             let varcad2 = document.getElementById("cad2").value;
-            let varcadM2 = mayuscula(varcad2);
+            let varcadM2 = funciones.mayuscula(varcad2);
             document.getElementById("cadM2").value = varcadM2;
         });
     </script>
 
     <script type="module">
         document.getElementById("btn3").addEventListener("click",function() {
-
             import("./Modulo.js").then(function(funciones){                
                 let varcad3 = document.getElementById("cad3").value;
                 let varcadM3 = funciones.mayuscula(varcad3);
