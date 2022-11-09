@@ -1,5 +1,5 @@
 export function mayuscula(cad){
-    return cad.ToUpperCase();
+    return cad.toUpperCase();
 }
 
 export function longitud(cad){
