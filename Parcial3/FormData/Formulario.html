@@ -9,48 +9,48 @@
   <body>
     <h1>Curriculum</h1>
 
-    <form>
+    <form id="formulario">
         <div class="row">
             <div class="from-group col-sm-12 col-md-4 col-lg-2">
                 <label for="idClin" class="form-label">ID</label>
-                <input type="text" class="form-control" id="idClin">
+                <input type="text" name="idClin" class="form-control" id="idClin">
               </div>
           
               <div class="from-group col-sm-12 col-md-8 col-lg-10">
                 <label for="idNombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="idNombre">
+                <input type="text" name="idNombre" class="form-control" id="idNombre">
               </div>
             </div>
             <div class="row">
               <div class="from-group col-sm-3 col-md-4 col-lg-4">
                 <label for="idRfc" class="form-label">RFC</label>
-                <input type="text" class="form-control" id="idRFC">
+                <input type="text" name="idRFC" class="form-control" id="idRFC">
               </div>
           
               <div class="from-group col-sm-5 col-md-4 col-lg-4">
                 <label for="idCurp" class="form-label">CURP</label>
-                <input type="text" class="form-control" id="idCurp">
+                <input type="text" name="idCurp" class="form-control" id="idCurp">
               </div>
 
               <div class="from-group col-sm-4 col-md-4 col-lg-4">
                 <label for="idIrs" class="form-label">Irs</label>
-                <input type="text" class="form-control" id="idIrs">
+                <input type="text" name="idIrs" class="form-control" id="idIrs">
               </div>
             </div>
             <div class="row">
               <div class="from-group col-sm-4 col-md-4 col-lg-4">
                 <label for="idCorreo" class="form-label">Correo</label>
-                <input type="text" class="form-control" id="idCorreo">
+                <input type="text" name="idCorreo" class="form-control" id="idCorreo">
               </div>
 
               <div class="from-group col-sm-4 col-md-4 col-lg-4">
                 <label for="idContraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="idContraseña">
+                <input type="password" name="idContraseña" class="form-control" id="idContraseña">
               </div>
               
               <div class="from-group col-sm-4 col-md-4 col-lg-4">
                 <label for="idSS" class="form-label">Numero de seguro social</label>
-                <input type="password" class="form-control" id="idSS">
+                <input type="password" name="idSS" class="form-control" id="idSS">
               </div>
         </div>
 
@@ -103,11 +103,31 @@
 </div>
 
 <script>
+  //document.getElementById("Registrar").addEventListener("click",async () => {
+   //let respuesta = await fetch('GetRegistro.php');
+    //let dato = await respuesta.json();
+    //document.getElementById("idClin").value=dato.idClin;
+   // document.getElementById("idNombre").value=dato.idNombre;
+ // });
+</script>
+
+<script>
   document.getElementById("Registrar").addEventListener("click",async () => {
-    let respuesta = await fetch('GetRegistro.php');
+    var datosFormulario = new FormData(document.getElementById("formulario"));
+    let respuesta = await fetch('GetRegistro.php',{
+      method: 'POST',
+      body: datosFormulario,
+    });
     let dato = await respuesta.json();
-    document.getElementById("idClin").value=dato.idClin;
-    document.getElementById("idNombre").value=dato.idNombre;
+
+    document.getElementById("idClin").value=dato.ID;
+    document.getElementById("idNombre").value=dato.Nombre;
+    document.getElementById("idRFC").value=dato.idRFC;
+    document.getElementById("idCurp").value=dato.idCurp;
+    document.getElementById("idIrs").value=dato.idIrs;
+    document.getElementById("idCorreo").value=dato.idCorreo;
+    document.getElementById("idContraseña").value=dato.idContraseña;
+    document.getElementById("idSS").value=dato.idSS;
   });
 </script>
 
